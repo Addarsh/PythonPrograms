@@ -1,0 +1,47 @@
+#Implementing a min Priority Queue
+
+class minPQ:
+
+	def __init__(self):
+		self.myHeap = []
+		self.numElems = 0
+
+	def __swap(self,i,j):
+		temp = self.myHeap[i]
+		self.myHeap[i] = self.myHeap[j]
+		self.myHeap[j] = temp
+ 
+	def __swim(self,index):
+		child = index
+		parent = index/2
+		
+		while parent >= 1:
+			if myHeap[parent] > myHeap[child]:
+				self.__swap(parent-1,child-1)
+				child = parent
+				parent = child/2
+			else: break
+
+	def add(self,elem):
+		self.myHeap.append(elem)
+		self.numElems += 1
+		self.__swim(numElems)	
+	
+	def remove(self):
+		if self.numElems == 0: return
+		swap(1,numElems)
+		poppedElem = self.myHeap[0]
+		self.myHeap = self.myHeap[1:]
+		self.numElems -= 1
+		return poppedElem	
+
+	def size(self):
+		return self.numElems
+
+
+if __name__ == "__main__":
+	pq = minPQ()
+	pq.add(30)
+	pq.add(10)
+
+	print pq.remove()
