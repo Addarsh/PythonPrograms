@@ -75,7 +75,7 @@ class findAPath:
 		return mypath
 
 if __name__ == "__main__":
-	maze = [["B","B","C"],["B","C","C"],["C","C","B"]]
+	maze = [["B","B","C"],["B","B","C"],["C","C","C"]]
 	entrance = (0,2)
 	exit = (2,0)
 	fPath = findAPath(maze,entrance,exit)
