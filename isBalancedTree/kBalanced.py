@@ -42,6 +42,12 @@ if __name__ == "__main__":
 	root.left.right = Node(1)
 	root.left.left = Node(7)
 
+	root.right.left = Node(8)
+	root.right.right = Node(7)
+
+	root.right.left.left = Node(-8)
+	root.right.left.right = Node(-9)
+	
 	result =  checkKbalanced(root,1)
 	if result:
 		print result.key
